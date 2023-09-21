@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form</title>
+    <style>
+       
+
+       body {
+            font-family: Times New Roman, sans-serif;
+            background-color: #f8ff70;
+            }
+
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #debbf0dc;
+            border: 1.5px solid #c60841;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(122, 6, 74, 0.927);
+        }
+
+        h3 {
+            font-family: "Georgia", sans-serif; /* Replace "Your Font Name" with the actual font name or font stack */
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 30%;
+            padding: 10px;
+            border: 1.5px solid #cd4f8c;
+            border-radius: 8px;
+        }
+        div[id="result"] {
+            width: 96.5%;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ffffffdc;
+            border: 1.5px solid #3e20ea;
+            border-radius: 10px;
+        }
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #742997;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body >                     
+    <div class="container">
+        <h3> Checking the sentiment of review </h3>
+        <form action="#" method="post">
+            {%  review %}
+            <div class="form-group">
+                <label for="input1">Enter the review </label><br>
+                <input type="text" id="review" name="review">
+            </div>
+            <button type="submit" name="predict">Submit</button>
+            <div id="result" class="form-group">
+
+                <p>{{sentiment}}</p>
+                 
+            </div>
+        </form>
+    </div>
+</body>
+</html>
